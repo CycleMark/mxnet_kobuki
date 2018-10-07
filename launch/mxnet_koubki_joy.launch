@@ -1,0 +1,15 @@
+<!--
+  Standalone launcher for running a default Kobuki
+ -->
+<launch>
+
+	<node name="joy" pkg="joy" type="joy_node" output="screen">
+		<param name="dev" type="string" value="/dev/input/js0"/>
+	</node>
+
+	<node pkg="teleop_twist_joy" name="teleop_twist_joy" type="teleop_node" output="screen">
+		<remap from="cmd_vel" to="mobile_base/commands/velocity"/>
+	</node>
+
+
+</launch>
