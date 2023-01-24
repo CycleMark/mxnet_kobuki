@@ -35,7 +35,7 @@
 
 	<node name="robot_pose_publisher" pkg="robot_pose_publisher" type="robot_pose_publisher" output="screen"/>
 
-	<include file="$(find cloudwatch_logger)/launch/mxnet_cloudwatch_logger_application.launch"/>
+	<!--include file="$(find cloudwatch_logger)/launch/mxnet_cloudwatch_logger_application.launch"/-->
 
 	<!--node name="joy" pkg="joy" type="joy_node" output="screen">
 		<param name="dev" type="string" value="/dev/input/js0"/>
@@ -50,7 +50,7 @@
 	<!--include file="/home/mark/ros_ws/src/usb_cam/launch/usb_cam-test.launch"/--> 
 
 	<include file="/home/mark/ros_ws/src/turtlebot_apps/turtlebot_navigation/launch/amcl_demo.launch">
-		<arg name="map_file" value="/home/mark/cartographer_fulldownstairs_04022019.yaml.yaml"/>
+		<arg name="map_file" value="/home/mark/mxnetRobotics/kobukirobot/maps/map1.yaml"/>
 	</include>
 
   <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
